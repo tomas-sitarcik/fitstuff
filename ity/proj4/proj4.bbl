@@ -1,0 +1,57 @@
+\begin{thebibliography}{1}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{Dostupné z: }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+\providecommand{\selectlanguage}[1]{\relax}
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem{BarHaim2021RSwL}
+Bar, H.; Wang, H.: {\selectlanguage{english}Reproducible Science with LATEX}.
+  \emph{Journal of data science}, 2021: s. 111--125, ISSN 1680-743X.
+
+\bibitem{GratzerGeorgeA.2007MmiL}
+Gr{\"a}tzer, G.~A.: {\selectlanguage{english}\emph{More math into LaTeX}}. New
+  York: Springer, \v{C}tvrt\'{a} vyd\'{a}n\'{i}, 2007, ISBN 978-0-387-32289-6.
+
+\bibitem{MatthewsDavid2019Cbei}
+Matthews, D.: {\selectlanguage{english}Craft beautiful equations in Word with
+  LaTeX}. \emph{Nature (London)}, ro\v{c}n\'{i}k 570, \v{c}. 7760, 2019: s.
+  263--264, ISSN 0028-0836,
+  \url{https://media.nature.com/original/magazine-assets/d41586-019-01796-1/d41586-019-01796-1.pdf}.
+
+\bibitem{MoorheadAltheaV.2021ILuc}
+Moorhead, A.~V.: {\selectlanguage{english}Is LaTeX use correlated with the
+  number of equations in a manuscript?} \emph{Scientometrics}, ro\v{c}n\'{i}k
+  126, \v{c}.~10, 2021: s. 8259--8273, ISSN 0138-9130,
+  \url{https://link.springer.com/article/10.1007/s11192-021-04119-2}.
+
+\bibitem{NovotnyVit2021OCOL}
+Novotný, V.: {\selectlanguage{czech}Overleaf, Collaborative Online LaTeX
+  Editor}. \emph{Zpravodaj Československého sdružení uživatelů TeXu}, ,
+  \v{c}.~1, 2021: s. 3--8, ISSN 1211-6661,
+  \url{https://dml.cz/bitstream/handle/10338.dmlcz/150293/ZpravodajCSTUG_031-2021-1_2.pdf}.
+
+\bibitem{1394451}
+Oksuz, O.; Gudukbay, U.; Cetin, E.: Computer vision based text and equation
+  editor for LATEX. In \emph{2004 IEEE International Conference on Multimedia
+  and Expo (ICME) (IEEE Cat. No.04TH8763)}, ro\v{c}n\'{i}k~2, 2004, s.
+  1255--1258 Vol.2, \doi{10.1109/ICME.2004.1394451},
+  \url{https://ieeexplore-ieee-org.ezproxy.lib.vutbr.cz/document/1394451}.
+
+\bibitem{SyropoulosApostolos1900DtuL}
+Syropoulos, A.; Tsolomitis, A.; Sofroniou, N.:
+  {\selectlanguage{english}\emph{Digital typography using LaTeX}}. Springer
+  professional computing, Springer, 1900, ISBN 0387952179.
+
+\bibitem{SebekMichal2007Idsp}
+Šebek, M.: {\selectlanguage{czech}Implementace diskusní skupiny pro
+  studenty}. 2007.
+
+\bibitem{SimovaHana2018Zmvd}
+Šímová, H.: {\selectlanguage{czech}Zařazování matematických výrazů do
+  webových stránek}. 2018.
+
+\end{thebibliography}

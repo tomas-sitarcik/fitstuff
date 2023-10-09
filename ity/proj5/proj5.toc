@@ -1,0 +1,4 @@
+\babel@toc {english}{}
+\beamer@sectionintoc {1}{Teorie}{3}{0}{1}
+\beamer@sectionintoc {2}{Algoritmus}{5}{0}{2}
+\beamer@sectionintoc {3}{Zakončení}{8}{0}{3}

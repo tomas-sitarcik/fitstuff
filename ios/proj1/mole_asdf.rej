@@ -1,0 +1,35 @@
+--- mole	2023-04-26 09:00:03.479467314 +0200
++++ mole_fixed	2023-04-26 08:59:57.949468873 +0200
+@@ -61,18 +61,18 @@
+         oldDate="$(cat "$MOLE_RC" | awk -v line="$lineNumber" -F: 'NR==line {print $1}')"
+ 
+         date="$date,$oldDate"
+-        echo "$oldGroup"
+-        echo "$group"
++        #echo "$oldGroup"
++        #echo "$group"
+         if [ -n "$group" ]; then
+             if echo "$oldGroup" | grep -E -q "\b${group}\b"; then
+-                echo group is already in
++                #echo group is already in
+                 group="$oldGroup"
+             else 
+-                echo grup isntin yet
++                #echo grup isntin yet
+                 group="$oldGroup,$group"
+             fi
+         else
+-            echo no group
++            #echo no group
+             group="$oldGroup"
+         fi
+     fi
+@@ -254,7 +254,7 @@
+     output=
+     indent=0
+ 
+-    echo "$input"
++    #echo "$input"
+ 
+     for line in $input; do
+         awkRes=

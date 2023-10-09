@@ -1,0 +1,437 @@
+#!/bin/dash
+# xsitar06 Tomáš Sitarčík
+# 16.3.2023
+
+export POSIXLY_CORRECT=yes
+export LC_ALL=C
+
+printUsage () {
+    printf "Usage:
+mole -h
+mole [-g GROUP] FILE
+mole [-m] [FILTERS] [DIRECTORY]
+mole list [FILTERS] [DIRECTORY]\n"
+}
+
+edit_file () {
+
+    local_file=$1
+
+    if [ -n "$local_file" ]; then
+        if [ -z "$EDITOR" ]; then
+            if [ -z "$VISUAL" ]; then
+                eval "vi $local_file"
+                editorRes=$?
+            fi
+        fi
+
+        if [ -n "$EDITOR" ]; then
+            eval "$EDITOR $local_file"
+            editorRes=$?
+        fi
+
+        if [ -n "$VISUAL" ]; then
+            eval "$VISUAL$local_file"
+            editorRes=$?
+        fi
+    fi
+
+}
+
+check_for_realpath() {
+    res="$(realpath "~")" 
+    if [ "$res" = "127" ]; then
+        exit "$res"
+    fi
+}
+
+record_edit() {
+    date="$(date +%Y-%m-%d_%H-%M-%S)"
+    fp="$(realpath "$1")"
+    group=$2
+
+    awkRes="$(cat "$MOLE_RC" | gawk -r -v fp=^"$fp"$ -F: '$3 ~ fp {OFS=";";print NR, $0}')"
+    if [ -n "$awkRes" ]; then
+        lineNumber=$((${awkRes%;*}))
+        lineText=${awkRes#*;}
+        usage=${lineText##*:*:*:}
+        usage=$((usage=usage+1))
+
+        oldGroup="$(cat "$MOLE_RC" | awk -v line="$lineNumber" -F: 'NR==line {print $2}')"
+        oldDate="$(cat "$MOLE_RC" | awk -v line="$lineNumber" -F: 'NR==line {print $1}')"
+
+        date="$date,$oldDate"
+        #echo "$oldGroup"
+        #echo "$group"
+        if [ -n "$group" ]; then
+            if echo "$oldGroup" | grep -E -q "\b${group}\b"; then
+                #echo group is already in
+                group="$oldGroup"
+            else 
+                #echo grup isntin yet
+                group="$oldGroup,$group"
+            fi
+        else
+            #echo no group
+            group="$oldGroup"
+        fi
+    fi
+
+    if [ -n "$lineNumber" ]; then 
+        eval "$(cat "$MOLE_RC" | sed -i "$lineNumber"d "$MOLE_RC")"
+    fi
+
+    printf "%s:%s:%s:%d\n" "$date" "$group" "$fp" "$usage" >> "$MOLE_RC"
+}
+
+
+group_filter () {
+    input=$1
+    groupFilter=$2
+    output=
+
+    if [ -z "$groupFilter" ]; then
+        return
+    fi
+
+    for line in $input; do
+        oldIFS="$IFS"
+        IFS=','
+        contains=0
+        for groupf in $groupFilter; do
+            awkRes=
+            awkRes="$(echo "$line" | awk -F: '$2 {print $0}')"
+            if [ -n "$groupf" ]; then
+                regexp="[,:]${groupf}[,:]"
+                match=$(echo "$awkRes" | grep -E "$regexp" )
+                if [ -n "$match" ]; then
+                    contains=1
+                    break
+                fi
+            fi
+        done
+        IFS="$oldIFS"
+
+        if [ 1 -eq "$contains" ]; then
+            output="$output$IFS$line"
+        fi
+        
+    done
+
+    echo "$output"
+}
+
+directory_filter () {
+    directory=$1
+    input=$2
+
+    if [ -z "$directory" ]; then
+        directory="$PWD"
+    fi
+    directory="$(realpath "$directory")"
+    output=
+    for line in $input; do
+        awkRes=
+        awkRes="$(echo "$line" | grep -E ":$directory/[\.a-zA-Z0-9_-]+:")"
+        if [ -n "$awkRes" ]; then
+            output="$output$IFS$line"
+        fi
+
+    done
+
+    echo "$output"
+}
+
+before_after_filter () {
+    before=$1
+    after=$2
+    input=$3
+    output=
+
+    # conver to integer comparable format
+    before="$(echo "$before" | sed 's/-//g')" 
+    after="$(echo "$after" | sed 's/-//g')" 
+
+    for line in $input; do
+        date="$(echo "$line" | awk -F: '$1 {print $1}' | awk -F, '$1 {print $1}' | awk -F_  '$1 {print $1}' | sed 's/-//g')"
+        if [ -n "$before" ] && [ -n "$after" ] && [ -n "$date" ]; then
+            if [ "$before" -gt "$date" ] && [ "$after" -lt "$date" ]; then
+                output="$output$IFS$line"
+            fi
+        fi
+
+        if [ -n "$before" ] && [ -z "$after" ] && [ -n "$date" ]; then
+            if [ "$before" -gt "$date" ]; then
+                output="$output$IFS$line"
+            fi
+        fi
+
+        if [ -z "$before" ] && [ -n "$after" ] && [ -n "$date" ]; then
+            if [ "$after" -lt "$date" ]; then
+                output="$output$IFS$line"
+            fi
+        fi
+    done
+
+    echo "$output"
+}
+
+get_most_used () {
+    input=$1
+    output=
+    maxUsage=0
+    # conver to integer comparable format
+
+    for line in $input; do
+        awkRes=
+        awkRes="$(echo "$line" | awk -F: '{print $4}')"
+        if [ -n "$awkRes" ]; then
+            if [ "$awkRes" -gt "$maxUsage" ] || [ "$awkRes" -eq "$maxUsage" ] ; then
+                maxUsage="$awkRes"
+                output="$(echo "$line" | awk -F: '{print $3}')"
+            fi 
+        fi
+    done
+
+    echo "$output"
+}
+
+get_last_used () {
+    input=$1
+    output=
+    minDiff=
+    today="$(date +%Y-%m-%d)"
+    today="$(echo "$today" | sed 's/-//g')"
+    # conver to integer comparable format
+
+    for line in $input; do
+        awkRes=
+        awkRes="$(echo "$line" | awk -F: '$1 {print $1}')"
+        awkRes="$(echo "$awkRes" | awk -F_ '$1 {print $1}')"
+        
+        if [ -n "$awkRes" ]; then
+            awkRes="$(echo "$awkRes" | sed 's/-//g')"
+            diff=$((today - awkRes))
+
+            if [ -z "$minDiff" ]; then
+                minDiff="$diff"
+            fi
+
+            if [ "$diff" -lt "$minDiff" ] || [ "$diff" -eq "$minDiff" ]; then
+                minDiff="$diff"
+                output="$(echo "$line" | awk -F: '{print $3}')"
+            fi  
+        fi
+    done
+
+    echo "$output"
+}
+
+apply_filters () {
+    output=$1
+    dir=$2
+    groupfilter=$3
+    doDirFilter=$4
+
+    if [ "$gflag" ]; then
+        output=$(group_filter "$output" "$groupfilter" )
+    fi
+
+    if [ -z "$doDirFilter" ]; then
+
+        output=$(directory_filter "$dir" "$output")
+    fi
+
+    if [ -n "$bflag" ] || [ -n "$aflag" ]; then
+        output=$(before_after_filter "$bval" "$aval" "$output")
+    fi
+
+    list="$output"
+}
+
+list_records () {
+    input=$1
+    output=
+    indent=0
+
+    #echo "$input"
+
+    for line in $input; do
+        awkRes=
+        awkRes="$(echo "$line" | awk -F: '$3 {OFS=";"; print $3, $2}')"
+
+        if [ ! -f "$(echo "$line" | awk -F: '$3 {print $3}')" ]; then
+            continue
+        fi
+
+        filename=${awkRes##*/}
+        filename=${filename%;*}
+
+        
+        
+        if [ -n "$filename" ]; then
+            unformatted="$unformatted$IFS$awkRes"
+            if [ ${#filename} -gt "$indent" ]; then
+                indent=${#filename}
+            fi
+        fi 
+    done
+
+    indent=$((indent + 2)) #filename size + ':' and mandatory ' '
+
+    for line in $unformatted; do 
+        filename=${line##*/}
+        filename=${filename%;*}
+        groups=${line##*;}
+
+        filename="$filename: "
+        while [ ${#filename} -lt "$indent" ]; do
+            filename="$filename "
+        done
+
+        if [ -z "$groups" ]; then
+            groups=-
+        else
+            groups=$(echo "$groups" | tr "," "\\n" | sort | xargs | tr " " "," ) # :(
+        fi
+
+        output="$filename$groups$IFS$output"
+    done
+
+    echo "$output"
+
+}
+# end of function declarations
+
+if [ -z "$MOLE_RC" ]; then
+    >&2 echo "MOLE_RC not defined"
+    exit 1
+fi
+
+if [ "$1" = "list" ]; then
+    lflag=1
+    shift 1
+fi
+
+if [ "$1" = "secret-log" ]; then
+    sflag=1
+    shift 1
+fi
+
+while getopts mhg:b:a: name
+do 
+    case $name in
+    h)  hflag=1
+        shift 1;;
+    g)  gflag=1
+        group="$OPTARG"
+        if [ -z "$group" ]; then
+            echo "Missing -g value.\n"
+            exit 2
+        fi
+        shift 2;;
+    m)  mflag=1
+        shift 1;;
+    b)  bflag=1
+        bval="$OPTARG"
+        if [ -z "$bval" ]; then
+            echo "Missing -b value.\n"
+            exit 2
+        fi
+        shift 2;;
+    a)  aflag=1
+        aval="$OPTARG"
+        if [ -z "$aval" ]; then
+            echo "Missing -a value.\n"
+            exit 2
+        fi
+        shift 2;;
+    ?)  printUsage
+        exit 2;;
+    esac
+done
+
+for last; do true; done
+dir="$last"
+
+check_for_realpath
+
+if [ -n "$lflag" ]; then
+
+    if [ ! -d "$dir" ] || [ ! -e "$dir" ]; then
+        dir="$PWD"
+    fi
+    list="$(cat "$MOLE_RC")"
+
+    apply_filters "$list" "$dir" "$group"
+
+    list_records "$list"
+
+    exit 0
+fi
+
+if [ -n "$sflag" ]; then
+
+    list="$(cat "$MOLE_RC")"
+
+    if [ -z "$dir" ]; then
+        doDir="false"
+    fi
+
+    apply_filters "$list" "$dir" "$group" "$doDir"
+
+    list="$(echo "$list" | 
+    awk -F: '{OFS=";";print $3, $1}' | # get the fields
+    tr "," "\;" | # format the dates
+    sort )" # sort and remove trailling semicolon
+
+    echo "$list" | bzip2 > "home/$USER/.mole/log_$USER_$(date +%Y-%m-%d_%H-%M-%S).bz2"
+
+    exit 0
+fi
+
+if [ -n "$hflag" ]; then
+    printUsage
+    exit 0
+fi
+
+# simple edit
+if [ -z "$lflag" ] && [ -z "$sflag" ] && [ -z "$mflag" ] && [ -n "$1" ]; then
+    shift $((OPTIND - 1))
+    file="$1"
+    if [ -n "$file" ] && [ ! -d "$file" ] && [ -e "$file" ]; then
+        edit_file "$file"
+
+        if [ "0" = "$editorRes" ] && [ -s "$file" ]; then
+            record_edit "$file" "$group"
+            exit 0
+        fi
+    exit "$editorRes"
+    fi
+fi
+
+    list="$(cat "$MOLE_RC")"
+    apply_filters "$list" "$dir" "$group"
+
+    if [ -n "$mflag" ]; then
+        list=$(get_most_used "$list")
+    else
+        list=$(get_last_used "$list")
+    fi
+
+    if [ -z "$list" ]; then
+        echo "No file matches the passed filters."
+        exit 1
+    fi
+
+    if [ -n "$list" ] && [ ! -d "$list" ]; then
+        edit_file "$list"
+
+        if [ 0 -eq "$editorRes" ] && [ -s "$list" ]; then
+            group=""
+            record_edit "$list" "$group"
+            exit 0
+        fi
+        exit "$editorRes"
+    fi
+    exit 0

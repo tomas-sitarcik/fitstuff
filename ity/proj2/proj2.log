@@ -1,0 +1,768 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2023.3.20)  27 MAY 2023 02:01
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**proj2.tex
+(./proj2.tex
+LaTeX2e <2020-10-01> patch level 4
+L3 programming layer <2021-01-09> xparse <2020-03-03>
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
+)
+\c@part=\count177
+\c@section=\count178
+\c@subsection=\count179
+\c@subsubsection=\count180
+\c@paragraph=\count181
+\c@subparagraph=\count182
+\c@figure=\count183
+\c@table=\count184
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2020/08/01 v1.3d Input encoding file
+\inpenc@prehook=\toks15
+\inpenc@posthook=\toks16
+)
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+)
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+))
+\Gm@cnth=\count185
+\Gm@cntv=\count186
+\c@Gm@tempcnt=\count187
+\Gm@bindingoffset=\dimen139
+\Gm@wd@mp=\dimen140
+\Gm@odd@mp=\dimen141
+\Gm@even@mp=\dimen142
+\Gm@layoutwidth=\dimen143
+\Gm@layoutheight=\dimen144
+\Gm@layouthoffset=\dimen145
+\Gm@layoutvoffset=\dimen146
+\Gm@dimlist=\toks18
+)
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2021/01/26 3.53 The Babel package
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2021/01/26 3.53 Babel common definitions
+\babel@savecnt=\count188
+\U@D=\dimen147
+\l@babelnohyphens=\language86
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read2
+)
+\bbl@dirlevel=\count189
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel-czech/czech.ldf
+Language: czech 2008/07/06 v3.1a Czech support from the babel system
+Package babel Info: Making " an active character on input line 172.
+\cs@wordlen=\count190
+Package babel Info: Making - an active character on input line 226.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2020/08/10 v2.0s Standard LaTeX package
+
+(/usr/share/texlive/texmf-dist/tex/cslatex/base/il2enc.def
+File: il2enc.def 1997/08/20 CSLaTeX
+Now handling font encoding IL2 ...
+... no UTF-8 mapping file for font encoding IL2
+)
+LaTeX Font Info:    Trying to load font information for IL2+cmr on input line 1
+12.
+
+(/usr/share/texlive/texmf-dist/tex/cslatex/base/il2cmr.fd
+File: il2cmr.fd 1997/02/06 CSLaTeX font definitions
+))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2020-05-15 v7.00e Hypertext links for LaTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+)
+\@linkdim=\dimen148
+\Hy@linkcounter=\count191
+\Hy@pagecounter=\count192
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2020-05-15 v7.00e Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count193
+Package hyperref Info: Option `unicode' set `true' on input line 4338.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2020-05-15 v7.00e Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Hyper figures OFF on input line 4464.
+Package hyperref Info: Link nesting OFF on input line 4469.
+Package hyperref Info: Hyper index ON on input line 4472.
+Package hyperref Info: Plain pages OFF on input line 4479.
+Package hyperref Info: Backreferencing OFF on input line 4484.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4717.
+\c@Hy@tempcnt=\count194
+
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5076.
+\XeTeXLinkMargin=\dimen149
+
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count195
+\Field@Width=\dimen150
+\Fld@charsize=\dimen151
+Package hyperref Info: Hyper figures OFF on input line 6347.
+Package hyperref Info: Link nesting OFF on input line 6352.
+Package hyperref Info: Hyper index ON on input line 6355.
+Package hyperref Info: backreferencing OFF on input line 6362.
+Package hyperref Info: Link coloring OFF on input line 6367.
+Package hyperref Info: Link coloring with OCG OFF on input line 6372.
+Package hyperref Info: PDF/A mode OFF on input line 6377.
+LaTeX Info: Redefining \ref on input line 6417.
+LaTeX Info: Redefining \pageref on input line 6421.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi packa
+ge
+with kernel methods
+)
+\Hy@abspage=\count196
+\c@Item=\count197
+\c@Hfootnote=\count198
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2020-05-15 v7.00e Hyperref driver for pdfTeX
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery packag
+e
+with kernel methods
+)
+\Fld@listcount=\count199
+\c@bookmark@seq@number=\count266
+
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+86.
+)
+\Hy@SectionHShift=\skip49
+)
+(/usr/share/texlive/texmf-dist/tex/latex/changepage/chngpage.sty
+Package: chngpage 2009/10/20 v1.2b change page layout
+\c@cp@cnt=\count267
+\c@cp@tempcnt=\count268
+)
+(/usr/share/texlive/texmf-dist/tex/latex/footnotebackref/footnotebackref.sty
+Package: footnotebackref 2012/07/01 v1.0 Backreferences for footnotes (Holger L
+ange)
+\c@BackrefHyperFootnoteCounter=\count269
+)
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/times.sty
+Package: times 2020/03/25 PSNFSS-v9.3 (SPQR) 
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks19
+\thm@bodyfont=\toks20
+\thm@headfont=\toks21
+\thm@notefont=\toks22
+\thm@headpunct=\toks23
+\thm@preskip=\skip50
+\thm@postskip=\skip51
+\thm@headsep=\skip52
+\dth@everypar=\toks24
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks25
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+\c@definition=\count270
+\c@sentence=\count271
+LaTeX Font Info:    Trying to load font information for IL2+ptm on input line 2
+2.
+
+(/usr/share/texlive/texmf-dist/tex/cslatex/cspsfonts/il2ptm.fd
+File: il2ptm.fd 1998/01/31 CS Times
+LaTeX Font Info:     CS Times on input line 2.
+LaTeX Font Info:    (C) Z. Wagner,1998/01/31 on input line 3.
+LaTeX Font Info:    Created by CsPsFont utility v.1.0e (C) Z. Wagner, 1998/01/3
+1 on input line 4.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2020-01-29 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count272
+\l__pdf_internal_box=\box47
+)
+(./proj2.aux)
+\openout1 = `proj2.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for IL2/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(39.83368pt, 517.84006pt, 39.83414pt)
+* v-part:(T,H,B)=(65.44142pt, 717.00935pt, 62.59607pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=517.84006pt
+* \textheight=717.00935pt
+* \oddsidemargin=-32.43631pt
+* \evensidemargin=-32.43631pt
+* \topmargin=-43.82857pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=11.0pt
+* \footskip=30.0pt
+* \marginparwidth=4.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumntrue
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package hyperref Info: Link coloring OFF on input line 22.
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
+
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count273
+)
+LaTeX Info: Redefining \ref on input line 22.
+LaTeX Info: Redefining \pageref on input line 22.
+LaTeX Info: Redefining \nameref on input line 22.
+
+(./proj2.out) (./proj2.out)
+\@outlinefile=\write3
+\openout3 = `proj2.out'.
+
+ [1
+
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    Trying to load font information for U+msa on input line 43.
+
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 43.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+! Undefined control sequence.
+l.43 $$\overset
+               {iid}{\sim}$$
+? 
+LaTeX Font Info:    Trying to load font information for IL2+pcr on input line 4
+9.
+(/usr/share/texlive/texmf-dist/tex/cslatex/cspsfonts/il2pcr.fd
+File: il2pcr.fd 1998/01/31 CS Courier
+LaTeX Font Info:     CS Courier on input line 2.
+LaTeX Font Info:    (C) Z. Wagner,1998/01/31 on input line 3.
+LaTeX Font Info:    Created by CsPsFont utility v.1.0e (C) Z. Wagner, 1998/01/3
+1 on input line 4.
+)
+Underfull \hbox (badness 1281) in paragraph at lines 46--51
+\IL2/ptm/m/n/10.95 De-fi-nice 1 nebo rov-nice (3) na stranì 1. Pro vy-
+ []
+
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 6
+7.
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+)
+! Undefined control sequence.
+<recently read> \overset 
+                         
+l.84     $\overset
+                  {\ast}{\underset{A}{\vdash}}$ ${(q_F, \epsilon, \gamma)}$ ...
+
+? 
+! Undefined control sequence.
+l.84     $\overset{\ast}{\underset
+                                  {A}{\vdash}}$ ${(q_F, \epsilon, \gamma)}$ ...
+
+? 
+! Undefined control sequence.
+<argument> \leftroot 
+                     {-1}\uproot {1}9
+l.98 ...11}_{22} - \sqrt[\leftroot{-1}\uproot{1}9]
+                                                  {x + \sqrt[\leftroot{-1}\u...
+
+? 
+! Undefined control sequence.
+<argument> \leftroot {-1}\uproot 
+                                 {1}9
+l.98 ...11}_{22} - \sqrt[\leftroot{-1}\uproot{1}9]
+                                                  {x + \sqrt[\leftroot{-1}\u...
+
+? 
+! Undefined control sequence.
+<argument> \leftroot 
+                     {-1}\uproot {1}7
+l.98 ...9]{x + \sqrt[\leftroot{-1}\uproot{1}7]{y}}
+                                                   \quad
+? 
+! Undefined control sequence.
+<argument> \leftroot {-1}\uproot 
+                                 {1}7
+l.98 ...9]{x + \sqrt[\leftroot{-1}\uproot{1}7]{y}}
+                                                   \quad
+? 
+! Undefined control sequence.
+<argument> \leftroot 
+                     {-1}\uproot {1}7
+l.98 ...9]{x + \sqrt[\leftroot{-1}\uproot{1}7]{y}}
+                                                   \quad
+? 
+! Undefined control sequence.
+<argument> \leftroot {-1}\uproot 
+                                 {1}7
+l.98 ...9]{x + \sqrt[\leftroot{-1}\uproot{1}7]{y}}
+                                                   \quad
+? 
+! Undefined control sequence.
+<argument> \leftroot 
+                     {-1}\uproot {1}7
+l.98 ...9]{x + \sqrt[\leftroot{-1}\uproot{1}7]{y}}
+                                                   \quad
+? 
+! Undefined control sequence.
+<argument> \leftroot {-1}\uproot 
+                                 {1}7
+l.98 ...9]{x + \sqrt[\leftroot{-1}\uproot{1}7]{y}}
+                                                   \quad
+? 
+! Undefined control sequence.
+<argument> \leftroot 
+                     {-1}\uproot {1}7
+l.98 ...9]{x + \sqrt[\leftroot{-1}\uproot{1}7]{y}}
+                                                   \quad
+? 
+! Undefined control sequence.
+<argument> \leftroot {-1}\uproot 
+                                 {1}7
+l.98 ...9]{x + \sqrt[\leftroot{-1}\uproot{1}7]{y}}
+                                                   \quad
+? 
+
+! LaTeX Error: Environment align undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.104 \begin{align}
+                   
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.105         - \cos
+                    ^2 \beta = & \frac{\frac{\frac{1}{x} + \frac{1}{3}}{y} +...
+
+? 
+! Misplaced alignment tab character &.
+l.105         - \cos^2 \beta = &
+                                 \frac{\frac{\frac{1}{x} + \frac{1}{3}}{y} +...
+
+? 
+! Undefined control sequence.
+<argument> \overset 
+                    {8}{\underset {j=2}{\prod }}~q_j
+l.106 ... {\overset{8}{\underset{j=2}{\prod}}~q_j}
+                                                   &\\
+? 
+! Undefined control sequence.
+<argument> \overset {8}{\underset 
+                                  {j=2}{\prod }}~q_j
+l.106 ... {\overset{8}{\underset{j=2}{\prod}}~q_j}
+                                                   &\\
+? 
+! Misplaced alignment tab character &.
+l.106 ...\overset{8}{\underset{j=2}{\prod}}~q_j} &
+                                                  \\
+? 
+! Misplaced alignment tab character &.
+l.107 ...\circ a \Bigl\}^{\frac{2}{3}} \biggl) = &
+                                                   \log_{10}x & \\
+? 
+! Misplaced alignment tab character &.
+l.107 ...\}^{\frac{2}{3}} \biggl) = & \log_{10}x &
+                                                   \\
+? 
+! Misplaced alignment tab character &.
+l.108         \int_{a}^{b} f(x)\,dx = &
+                                        \int_{c}^{d} f(y)\,dy
+? 
+
+! LaTeX Error: \begin{document} ended by \end{align}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.109 \end{align}
+                 
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.109 \end{align}
+                 
+? 
+
+! LaTeX Error: Environment vmatrix undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.118     \begin{vmatrix}
+                         
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.119 
+      
+? 
+! Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.119 
+      
+? 
+! Display math should end with $$.
+<to be read again> 
+                   \par 
+l.119 
+      
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.120         b_
+                {11} & b_{12} & \cdots & b_{1n} \\
+? 
+! Misplaced alignment tab character &.
+l.120         b_{11} &
+                       b_{12} & \cdots & b_{1n} \\
+? 
+! Misplaced alignment tab character &.
+l.120         b_{11} & b_{12} &
+                                \cdots & b_{1n} \\
+? 
+! Misplaced alignment tab character &.
+l.120         b_{11} & b_{12} & \cdots &
+                                         b_{1n} \\
+? 
+! Misplaced alignment tab character &.
+l.121         b_{21} &
+                       b_{22} & \cdots & b_{2n} \\
+? 
+! Misplaced alignment tab character &.
+l.121         b_{21} & b_{22} &
+                                \cdots & b_{2n} \\
+? 
+! Misplaced alignment tab character &.
+l.121         b_{21} & b_{22} & \cdots &
+                                         b_{2n} \\
+? 
+! Misplaced alignment tab character &.
+l.122         \vdots &
+                       \vdots & \ddots & \vdots \\
+? 
+! Misplaced alignment tab character &.
+l.122         \vdots & \vdots &
+                                \ddots & \vdots \\
+? 
+! Misplaced alignment tab character &.
+l.122         \vdots & \vdots & \ddots &
+                                         \vdots \\
+? 
+! Misplaced alignment tab character &.
+l.123         b_{m1} &
+                       b_{m2} & \cdots & b_{mn}
+? 
+! Misplaced alignment tab character &.
+l.123         b_{m1} & b_{m2} &
+                                \cdots & b_{mn}
+? 
+! Misplaced alignment tab character &.
+l.123         b_{m1} & b_{m2} & \cdots &
+                                         b_{mn}
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.124 
+      
+? 
+
+! LaTeX Error: \begin{document} ended by \end{vmatrix}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.125     \end{vmatrix}
+                       
+? 
+! Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.125     \end{vmatrix}
+                       
+? 
+
+! LaTeX Error: Environment vmatrix undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.127     \begin{vmatrix}
+                         
+? 
+! Misplaced alignment tab character &.
+l.129         t &
+                  u~\\
+? 
+! Misplaced alignment tab character &.
+l.130         v~&
+                  w
+? 
+
+! LaTeX Error: \begin{document} ended by \end{vmatrix}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.132     \end{vmatrix}
+                       
+? 
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.135 \]
+        
+? 
+
+! LaTeX Error: Environment bmatrix undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.138     \begin{bmatrix}
+                         
+? 
+! Misplaced alignment tab character &.
+l.139             &
+                    \Omega + \Delta & \hat{\psi } \\
+? 
+! Misplaced alignment tab character &.
+l.139             & \Omega + \Delta &
+                                      \hat{\psi } \\
+? 
+! Misplaced alignment tab character &.
+l.140             \vec{\pi} &
+                              \omega & \\
+? 
+! Misplaced alignment tab character &.
+l.140             \vec{\pi} & \omega &
+                                       \\
+? 
+
+! LaTeX Error: \begin{displaymath} ended by \end{bmatrix}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.141     \end{bmatrix}
+                       
+? 
+! Undefined control sequence.
+l.147     \binom
+                {n}{k} =
+? 
+! Misplaced alignment tab character &.
+l.149         0 &
+                  \textrm{pro }k<0 \\
+? 
+! Misplaced alignment tab character &.
+l.150         \frac{n!}{k!(n-k)!} &
+                                    \textrm{pro }0 \leq k \leq n \\
+? 
+! Misplaced alignment tab character &.
+l.151         0 &
+                  \textrm{pro }k>0
+? 
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.154 \end{document}
+                     [1
+
+
+] (./proj2.aux)
+Package rerunfilecheck Info: File `proj2.out' has not changed.
+(rerunfilecheck)             Checksum: 2E3CA3291D006DA384860CAE8E9B580C;533.
+ ) 
+Here is how much of TeX's memory you used:
+ 9989 strings out of 479304
+ 142537 string characters out of 5869779
+ 462480 words of memory out of 5000000
+ 27033 multiletter control sequences out of 15000+600000
+ 432311 words of font info for 75 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 71i,8n,74p,298b,397s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texliv
+e/texmf-dist/fonts/enc/dvips/cs/xl2.enc}{/usr/share/texlive/texmf-dist/fonts/en
+c/dvips/cs/xt2.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex
+10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr
+8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on proj2.pdf (2 pages, 176605 bytes).
+PDF statistics:
+ 116 PDF objects out of 1000 (max. 8388607)
+ 94 compressed objects within 1 object stream
+ 12 named destinations out of 1000 (max. 500000)
+ 33 words of extra memory for PDF output out of 10000 (max. 10000000)
+

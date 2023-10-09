@@ -1,0 +1,96 @@
+\documentclass[11pt, a4paper, hyphens]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[left=2cm, text={17cm, 24cm}, top=3cm]{geometry}
+\usepackage[czech, english]{babel}
+\usepackage[IL2]{fontenc}
+\usepackage{times}
+\usepackage{amsmath}
+\usepackage[backref=section]{hyperref}
+
+\title{Typografie a publikování --- 4.\, projekt}
+\author{Tomáš Sitarčík}
+\bibliographystyle{czechiso}
+
+\begin{document}
+\begin{titlepage}
+    \begin{center}
+
+        \textsc{\Huge Vysoké učení technické v~Brně\\
+            \LARGE Fakulta informačních technologií\\}
+        \vspace{\stretch{0.382}}
+        \LARGE
+        Typografie a publikování --- 4. projekt\\\Huge Sazba matematických výrazů\\v prostředí a víc \LaTeX
+        \vspace{\stretch{0.618}}
+
+        {\Large \today \hfill Tomáš Sitarčík}
+
+    \end{center}
+\end{titlepage}
+\newpage
+
+\section{Úvod}
+\LaTeX je jedním z~nejpoužívanějších~\cite{MoorheadAltheaV.2021ILuc} a nejflexibilnějších prostředí na sázení matematických výrazů.
+Tento dokument obsahuje základy i některé pokročilé způsoby jejich sazbu a další užitečné nástroje pro práci s~\LaTeX em
+
+\section{Matematický mód}
+Pokud chceme zapsat nějaký matematický výraz tak ho musíme ohraničit speciálnímím znakem \verb|$|.
+Toto je ten nejjednodušší způsob jak zapnout matematický mód, další způsoby budou zmíněny v~dalších kapitolách.
+V~Matematickém módu pak můžeme používat speciální příkazy jako například \verb|\times| $\rightarrow \times$ nebo
+\verb|\frac{a}{b}| $\rightarrow \frac{a}{b}$. Jakýkoli text v~prostředí matematického módu je také zobrazený v~matematické fontu,
+například \verb|text| vypadá v~matematickém módu jako $text$.~\cite{SyropoulosApostolos1900DtuL}
+
+\section{Další způsoby vstupu do matematického módu}
+Matematický mód má více druhů. Při použití dvou \verb|$| na každé straně, tak se výsledný výraz zobrazí na vlastním řádku
+s~odsazením od okolního textu. Tento mód se také dá vyvolat pomocí \verb|\[ \]|~\cite{MatthewsDavid2019Cbei}, prostředí \verb|equation| a další.
+Příklad jak vypadá zkompilované použití tohoto módu se nachází v~další kapitole.
+
+\section{Odsazení symbolů}
+U~rovnic o~více neznámých je nahrazení proměnné která má exponent roven nule, za prázdné místo dobré pro čitelnost.
+Pomocí prostředí \verb|alignat*{n}|(kde \verb|n| je počet řádků) je možno vysázet několik rovnic podobným způsobem
+jako tabulku.
+Využitím \verb|alignat| tedy můžeme vytvořit zarovnanou soustavu rovnic.
+
+\verb|\begin{alignat*}{2}| \\
+\verb|      (A + B C)x &{}+{} &C &y = 0| \\
+\verb|      Ex &{}+{} &(F + G)&y = 23.| \\
+\verb|   \end{alignat*}|~\cite{GratzerGeorgeA.2007MmiL} \\
+\quad Po kompilaci:
+\begin{alignat*}{2}
+    (A~+ B C)x & + & C       & y = 0,  \\
+    Ex         & + & (F + G) & y = 23.
+\end{alignat*}
+
+\section{Řecké znaky}
+Řecké znaky jsou v~matematice velice časté. Ve většině případů vypadá příkaz následovně \verb|\[phoneticky zapsané písmeno]| takže
+například \verb|\phi| pro fí. Jsou ale i záludnější znaky jako \verb|\varphi|~\cite{SebekMichal2007Idsp} a další.
+
+\section{Matematické výrazy na webových stránkách}
+\LaTeX bohužel není možné tradičně použít k~zobrazení celé webové stránky. Pro sázení na webu se hodí JavaScriptová knihovna Katex, která je schopná
+zobrazi vzorce v~jazyku \TeX~\cite{SimovaHana2018Zmvd}.
+
+\section{Výsledky externího kódu v~\LaTeX u}
+Při výzkumu například SAT solverů se může hodit možnost přímo z~\LaTeX u zapínat programy a ve výsledném pdf souboru zahrnout jejich výstup.
+S~použitím python balíku \texttt{talk2stat} je možné právě to~\cite{BarHaim2021RSwL}.
+
+\section{Overleaf}
+Overleaf je velmi užitečný moderní editor pro \LaTeX. Běží přímo v~prohlížeči (překlad probíhá na serveru) takže
+ůžete pracovat kdekoli. Má i další funkce jako kolaborace několika uživatelů na jednom projektu~\phantomsection\cite{NovotnyVit2021OCOL}.
+
+\section{Alternativný možnosti tvorby výrazů v~\LaTeX u}
+Existují různé způsoby jak si zlehčit zadávání výrazů v~\LaTeX u. Většina těchto způsobů funguje v~rámci GUI, jeden ze zvláštnějších způsobů
+je pomocí rozpoznávání textu počítačem. To ale má svá úskalí.
+\begin{quotation}
+    \uv{\textit{
+    V~našem rozpoznávacím systému předpokládáme že
+    odstavce nebo dokumenty jsou psány na řádkovaném papíru,
+    řádek po řádku. Také je každý řádek rozdělen
+    na 3 pruhy pomocí 4 referenčních linke.
+    }}~\cite{1394451}
+\end{quotation}
+Jak jde vivodit z~citace, aby počítač text správně rozpoznal, tak musím být napsaný specifickým způsobem na speciální papír.
+
+%bibliography file "citations.bib"
+
+\bibliography{citations}
+
+\end{document}
